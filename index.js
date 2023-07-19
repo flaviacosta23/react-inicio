@@ -15,9 +15,33 @@ function Perfil(props) {
   
     return perfilContent;
   }
-  
 
+  function Bio() {
+    const minibio = <div className='minibio'>
+        Flávia Costa, formada em administração, mas encontrou na programação um caminho <br/>
+        para colocar em prática sua criatividade e o gosto pela tecnologia. 
+    </div>
+    return minibio;
+  }
+
+  function LinkLinkedin() {
+    return (<div className='linkedin'>
+        <a href='#' target='_blank'>Linkedin</a>
+    </div>);
+  }
+  
+  function Content() {
+    return (
+    <div>
+    <Perfil meuNome="Flávia Costa" arquivoFoto='perfilfoto.jpg' />
+    <br />
+    <Bio />
+    <br/> <br/>
+    <LinkLinkedin/>
+
+    </div>);
+  }
 ReactDOM.render(
-    <Perfil meuNome="Flávia Costa" arquivoFoto='perfilfoto.jpg' />,
+  <Content/>,
     document.getElementById('root')
 );
